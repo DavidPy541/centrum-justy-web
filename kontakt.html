@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>Kontakt — Centrum JUSTY z.ú.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  .contact-card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:20px 24px;}
+  .contact-card h3{font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--sage-dark);margin-bottom:8px;}
+  .contact-card p{margin:0;font-size:16px;color:var(--ink-soft);}
+  .callout{background:#fff;border:1px solid var(--line);border-left:3px solid var(--terracotta);border-radius:8px;padding:16px 20px;font-size:15px;color:var(--ink-soft);margin:20px 0;}
+  @media (max-width:700px){ .contact-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap headrow">
+    <a href="index.html" class="brand"><img src="assets/logo.png" alt="logo"><span>Centrum JUSTY z.ú.</span></a>
+    <nav>
+      <div class="has-dropdown">
+        <a href="o-nas.html" class="drop-trigger">O nás<span class="caret">⌄</span></a>
+        <div class="dropdown">
+          <div class="dropdown-inner">
+            <a href="o-nas.html#kdo-jsme">Kdo jsme</a>
+            <a href="o-nas.html#poslani">Poslání</a>
+            <a href="o-nas.html#komu-sluzby">Komu jsou naše služby určeny</a>
+            <a href="o-nas.html#zasady">Zásady</a>
+            <a href="o-nas.html#nas-tym">Náš tým</a>
+          </div>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="aktivity-projekty.html" class="drop-trigger">Aktivity/Projekty<span class="caret">⌄</span></a>
+        <div class="dropdown">
+          <div class="dropdown-inner">
+            <a href="aktivity-projekty.html#pestounska-pece">Pěstounská péče</a>
+            <a href="aktivity-projekty.html#osvojeni">Osvojení</a>
+            <a href="aktivity-projekty.html#sluzby-pestounske-rodiny">Služby pro pěstounské rodiny</a>
+            <a href="aktivity-projekty.html#nad-ramec-dohod">Nad rámec dohod</a>
+          </div>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="kontakt.html" class="drop-trigger">Kontakt<span class="caret">⌄</span></a>
+        <div class="dropdown">
+          <div class="dropdown-inner">
+            <a href="kontakt.html#kontakt">Kontakt</a>
+            <a href="kontakt.html#jak-se-dostanete">Jak se k nám dostanete</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <a class="cta" href="index.html#darovat">Chci darovat</a>
+  </div>
+</header>
+
+<section class="page-title">
+  <div class="wrap">
+    <div class="kicker">Kontakt</div>
+    <h1>Ozvěte se nám</h1>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="wrap intro-wrap">
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Adresa</h3>
+        <p>K Horkám 19/21<br>Praha 10 – Hostivař</p>
+      </div>
+      <div class="contact-card">
+        <h3>Telefon</h3>
+        <p>602 214 797</p>
+      </div>
+      <div class="contact-card">
+        <h3>E-mail</h3>
+        <p>centrumjusty@gmail.com</p>
+      </div>
+      <div class="contact-card">
+        <h3>IDDS</h3>
+        <p>48hswgb</p>
+      </div>
+    </div>
+    <p class="callout">Sociálně právní ochrana je poskytována v rámci regionů Praha a Středočeský kraj.</p>
+  </div>
+</section>
+
+<section id="jak-se-dostanete" class="projects">
+  <div class="wrap intro-wrap">
+    <h2>Jak se k nám dostanete</h2>
+    <p>Autobusová zastávka Hostivařské náměstí – 3 minuty chůze ke vchodu Centrum JUSTY z.ú.</p>
+    <p class="callout">Většinou ale jezdíme my za Vámi!</p>
+    <ul class="goals">
+      <li><strong>Autobus:</strong> č. 177, 181, 182, 901, 906 (zastávka 3 min. chůze od vstupu do organizace)</li>
+      <li><strong>Tramvaj:</strong> č. 22</li>
+      <li><strong>Vlak:</strong> zastávka Hostivař, Zahradní Město</li>
+      <li><strong>Metro:</strong> linky A, C</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h3>Centrum JUSTY z.ú.</h3>
+      <p>K Horkám 19/21<br>Praha 10 – Hostivař</p>
+    </div>
+    <div>
+      <h3>Kontakt</h3>
+      <p>Tel: 602 214 797<br>centrumjusty@gmail.com<br>IDDS: 48hswgb</p>
+    </div>
+    <div>
+      <h3>Navigace</h3>
+      <p><a href="o-nas.html">O nás</a><br><a href="aktivity-projekty.html">Aktivity/Projekty</a><br><a href="index.html#pribehy">Příběhy rodin</a><br><a href="kontakt.html">Kontakt</a></p>
+    </div>
+  </div>
+  <div class="foot-bottom wrap">© 2026 Centrum JUSTY z.ú. — sociálně-právní ochrana dětí v Praze a Středočeském kraji</div>
+</footer>
+
+</body>
+</html>
