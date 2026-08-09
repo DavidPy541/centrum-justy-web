@@ -43,6 +43,7 @@
           <div class="dropdown-inner">
             <a href="kontakt.html#kontakt">Kontakt</a>
             <a href="kontakt.html#jak-se-dostanete">Jak se k nám dostanete</a>
+            <a href="jak-to-u-nas-vypada.html">Jak to u nás vypadá</a>
           </div>
         </div>
       </div>
@@ -52,9 +53,20 @@
 </header>
 
 <section>
-  <div class="wrap intro-wrap">
-    <p class="intro-text">Jsme nezisková organizace, která poskytuje komplexní podporu pěstounským rodinám.</p>
-    <p class="intro-text">Podílíme se na propagaci náhradní rodinné péče a organizujeme přednášky pro širokou veřejnost zaměřené na výchovu a vývoj dětí, vztahy a komunikaci v rodině.</p>
+  <div class="wrap">
+    <div class="intro-split">
+      <div class="intro-text-col">
+        <p class="intro-text">Jsme nezisková organizace, která poskytuje komplexní podporu pěstounským rodinám.</p>
+        <p class="intro-text">Podílíme se na propagaci náhradní rodinné péče a organizujeme přednášky pro širokou veřejnost zaměřené na výchovu a vývoj dětí, vztahy a komunikaci v rodině.</p>
+      </div>
+      <div class="intro-media">
+        <img src="assets/foto/titulka.jpg" alt="Centrum JUSTY z.ú.">
+      </div>
+    </div>
+    <div class="capacity-cta">
+      <p>Máme volné kapacity pro klienty</p>
+      <a class="cta" href="#poptavka">Kontaktujte nás zde</a>
+    </div>
   </div>
 </section>
 
@@ -128,7 +140,7 @@
           <p class="step-label">Odešlete Váš dar pomocí těchto platebních údajů</p>
           <div class="donate-details">
             <div class="donate-fields">
-              <div><span class="field-label">Číslo účtu</span><span class="field-value" id="donate-account">XXXXXX / XXXX</span></div>
+              <div><span class="field-label">Číslo účtu</span><span class="field-value" id="donate-account">1496624005 / 5500</span></div>
               <div><span class="field-label">Variabilní symbol</span><span class="field-value" id="donate-vs">1</span></div>
               <div><span class="field-label">Částka</span><span class="field-value" id="donate-sum">1 000 Kč</span></div>
             </div>
@@ -139,10 +151,65 @@
               </svg>
             </div>
           </div>
-          <p class="donate-note">Číslo účtu doplní zadavatel — nyní zobrazen placeholder.</p>
           <a href="mailto:centrumjusty@gmail.com?subject=Potvrzeni%20o%20daru" class="donate-link">Chci získat potvrzení o daru</a>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="poptavka">
+  <div class="wrap">
+    <div class="donate-card">
+      <div class="donate-head">
+        <div class="qr-badge">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="4" width="20" height="16" rx="2" stroke="#2F6690" stroke-width="1.6"/>
+            <path d="M3 6l9 7 9-7" stroke="#2F6690" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Kontaktujte nás</h3>
+          <p>Vyplňte formulář a ozveme se vám zpět. Zprávu odešleme na centrumjusty@gmail.com.</p>
+        </div>
+      </div>
+
+      <form id="poptavka-form" class="poptavka-form">
+        <input type="hidden" name="access_key" value="VLOŽTE_SEM_VÁŠ_WEB3FORMS_KLÍČ">
+        <input type="hidden" name="subject" value="Nová poptávka z webu Centrum JUSTY z.ú.">
+        <input type="hidden" name="from_name" value="Web Centrum JUSTY z.ú.">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="p-jmeno">Jméno</label>
+            <input type="text" id="p-jmeno" name="Jméno" required>
+          </div>
+          <div class="form-field">
+            <label for="p-prijmeni">Příjmení</label>
+            <input type="text" id="p-prijmeni" name="Příjmení" required>
+          </div>
+          <div class="form-field">
+            <label for="p-telefon">Telefon</label>
+            <input type="tel" id="p-telefon" name="Telefon" required>
+          </div>
+          <div class="form-field">
+            <label for="p-email">E-mail</label>
+            <input type="email" id="p-email" name="E-mail" required>
+          </div>
+          <div class="form-field">
+            <label for="p-trvale">Bydliště trvalé</label>
+            <input type="text" id="p-trvale" name="Bydliště trvalé" required>
+          </div>
+          <div class="form-field">
+            <label for="p-fakticke">Bydliště faktické</label>
+            <input type="text" id="p-fakticke" name="Bydliště faktické">
+          </div>
+        </div>
+
+        <button type="submit" class="cta" style="margin-top:22px;">Odeslat</button>
+        <p id="poptavka-status" class="donate-note"></p>
+      </form>
     </div>
   </div>
 </section>
@@ -180,30 +247,45 @@
       <h2>Skutečné příběhy, které nás posouvají</h2>
     </div>
 
-    <article id="pribeh-lucinka" class="story-full">
-      <h3>Příběh dvanáctileté Lucinky</h3>
-      <p>Lucinka je dvanáctiletá dívka, která si v útlém věku prošla mimořádně těžkými životními zkouškami. Před dvěma lety jí náhle zemřel tatínek a před několika měsíci přišla také po těžké nemoci o maminku. Během krátké doby tak ztratila oba své rodiče a ocitla se v situaci, kterou si žádné dítě nezaslouží zažít.</p>
-      <p>Přesto nezůstala sama. Bezpečný domov a láskyplné zázemí jí poskytla její nevlastní sestra, která se rozhodla převzít odpovědnost za její výchovu a přijala Lucinku do pěstounské péče. Společně nyní budují nový domov, učí se žít s bolestnou ztrátou a hledají cestu k nové životní stabilitě.</p>
-      <p>Lucinka je citlivá, vnímavá a statečná dívka. Přestože se stále vyrovnává se ztrátou svých nejbližších, postupně znovu nachází pocit bezpečí a jistoty. Důležitou roli v jejím životě hraje podpora sestry, širší rodiny i odborníků, kteří rodinu na této náročné cestě doprovázejí.</p>
-      <p>Tento příběh připomíná, jak významnou roli mohou sehrát příbuzní pěstouni, kteří dítěti v těžké životní situaci nabídnou kontinuitu vztahů, blízkost a naději do budoucna.</p>
-    </article>
+    <div class="story-row">
+      <div class="story-photo">
+        <img src="assets/foto/foto-lucinka.jpg" alt="Příběh dvanáctileté Lucinky">
+      </div>
+      <article id="pribeh-lucinka" class="story-full story-full-in-row">
+        <h3>Příběh dvanáctileté Lucinky</h3>
+        <p>Lucinka je dvanáctiletá dívka, která si v útlém věku prošla mimořádně těžkými životními zkouškami. Před dvěma lety jí náhle zemřel tatínek a před několika měsíci přišla také po těžké nemoci o maminku. Během krátké doby tak ztratila oba své rodiče a ocitla se v situaci, kterou si žádné dítě nezaslouží zažít.</p>
+        <p>Přesto nezůstala sama. Bezpečný domov a láskyplné zázemí jí poskytla její nevlastní sestra, která se rozhodla převzít odpovědnost za její výchovu a přijala Lucinku do pěstounské péče. Společně nyní budují nový domov, učí se žít s bolestnou ztrátou a hledají cestu k nové životní stabilitě.</p>
+        <p>Lucinka je citlivá, vnímavá a statečná dívka. Přestože se stále vyrovnává se ztrátou svých nejbližších, postupně znovu nachází pocit bezpečí a jistoty. Důležitou roli v jejím životě hraje podpora sestry, širší rodiny i odborníků, kteří rodinu na této náročné cestě doprovázejí.</p>
+        <p>Tento příběh připomíná, jak významnou roli mohou sehrát příbuzní pěstouni, kteří dítěti v těžké životní situaci nabídnou kontinuitu vztahů, blízkost a naději do budoucna.</p>
+      </article>
+    </div>
 
-    <article id="pribeh-manzele" class="story-full">
-      <h3>Příběh manželů, kteří si svůj sen o pěstounství nesou celý život</h3>
-      <p>Manželé vychovali tři vlastní děti, které jsou dnes již dospělé a vedou své samostatné životy. Přestože jejich rodičovská cesta byla naplněná, už před více než 35 lety mezi sebou vedli rozhovor, který jim zůstal v srdci po celý život – jednou by chtěli otevřít svůj domov dítěti, které nemůže vyrůstat ve své původní rodině.</p>
-      <p>V období, kdy vychovávali své děti, věděli, že jejich čas ještě přijde. Myšlenka na pěstounství je ale nikdy neopustila. Jakmile jejich děti dospěly a osamostatnily se, rozhodli se svůj dlouholetý sen proměnit ve skutečnost. Absolvovali přípravy pro budoucí pěstouny, prošli celým procesem odborného posouzení a s velkým odhodláním se připravili na příchod dítěte do své rodiny.</p>
-      <p>Dnes stojí na prahu nové životní etapy. Mají připravený domov, otevřené srdce i bohaté rodičovské zkušenosti. S trpělivostí a pokorou čekají na dítě, kterému budou moci nabídnout bezpečí, přijetí a stabilní rodinné zázemí.</p>
-      <p>Je nám ctí být této rodině na jejich cestě průvodcem a poskytovat jim doprovázení v období očekávání i v budoucí pěstounské péči. Jejich příběh je krásnou připomínkou toho, že pomáhat dětem lze v různých životních etapách a že některé sny mají svou sílu i po mnoha desetiletích.</p>
-    </article>
+    <div class="story-row">
+      <div class="story-photo">
+        <img src="assets/foto/foto-manzele.jpg" alt="Příběh manželů, kteří si svůj sen o pěstounství nesou celý život">
+      </div>
+      <article id="pribeh-manzele" class="story-full story-full-in-row">
+        <h3>Příběh manželů, kteří si svůj sen o pěstounství nesou celý život</h3>
+        <p>Manželé vychovali tři vlastní děti, které jsou dnes již dospělé a vedou své samostatné životy. Přestože jejich rodičovská cesta byla naplněná, už před více než 35 lety mezi sebou vedli rozhovor, který jim zůstal v srdci po celý život – jednou by chtěli otevřít svůj domov dítěti, které nemůže vyrůstat ve své původní rodině.</p>
+        <p>V období, kdy vychovávali své děti, věděli, že jejich čas ještě přijde. Myšlenka na pěstounství je ale nikdy neopustila. Jakmile jejich děti dospěly a osamostatnily se, rozhodli se svůj dlouholetý sen proměnit ve skutečnost. Absolvovali přípravy pro budoucí pěstouny, prošli celým procesem odborného posouzení a s velkým odhodláním se připravili na příchod dítěte do své rodiny.</p>
+        <p>Dnes stojí na prahu nové životní etapy. Mají připravený domov, otevřené srdce i bohaté rodičovské zkušenosti. S trpělivostí a pokorou čekají na dítě, kterému budou moci nabídnout bezpečí, přijetí a stabilní rodinné zázemí.</p>
+        <p>Je nám ctí být této rodině na jejich cestě průvodcem a poskytovat jim doprovázení v období očekávání i v budoucí pěstounské péči. Jejich příběh je krásnou připomínkou toho, že pomáhat dětem lze v různých životních etapách a že některé sny mají svou sílu i po mnoha desetiletích.</p>
+      </article>
+    </div>
 
-    <article id="pribeh-zeleny" class="story-full">
-      <h3>Příběh o tom, že rodinu netvoří jen biologické pouto</h3>
-      <p>Když se pan Zelený, po několika letech života sám staral o svého syna, potkal partnerku, která vychovávala stejně starého chlapce. Jejich vztah se postupně prohluboval, až se rozhodli spojit své domácnosti a vytvořit společnou rodinu. Oba chlapci si na sebe zvykli a začali vyrůstat jako bratři. Sdíleli každodenní radosti, školní starosti i společné zážitky.</p>
-      <p>Po několika letech však přišla nečekaná životní změna. Partnerka od rodiny odešla a svého syna zanechala v péči pana Zeleného. Pro chlapce to byla velmi bolestná situace, ale jedno měl jisté – v rodině, kterou znal a kde se cítil bezpečně, mohl zůstat.</p>
-      <p>Pan Zelený neváhal. Věděl, že chlapec potřebuje stabilitu, jistotu a člověka, který za ním bude stát. Rozhodl se proto podniknout všechny potřebné kroky, aby mohl o syna své bývalé partnerky pečovat i nadále. Přijal ho do pěstounské péče a převzal za něj plnou rodičovskou odpovědnost.</p>
-      <p>Dnes oba chlapci dál vyrůstají společně pod jednou střechou. Přestože nejsou biologickými sourozenci, jejich vztah je pevný a přirozený. Pan Zelený chlapcům poskytuje bezpečný domov, podporu a zázemí, které každé dítě potřebuje.</p>
-      <p>Jejich příběh ukazuje, že skutečné rodičovství není založeno pouze na pokrevním příbuzenství. Někdy vzniká z každodenní péče, odpovědnosti a rozhodnutí být dítěti nablízku i v těch nejtěžších chvílích. Jsme rádi, že můžeme tuto rodinu doprovázet na jejich společné cestě a být svědky toho, jak silné mohou být vztahy postavené na důvěře, lásce a vzájemném přijetí.</p>
-    </article>
+    <div class="story-row">
+      <div class="story-photo">
+        <img src="assets/foto/foto-synove.jpg" alt="Příběh o tom, že rodinu netvoří jen biologické pouto">
+      </div>
+      <article id="pribeh-zeleny" class="story-full story-full-in-row">
+        <h3>Příběh o tom, že rodinu netvoří jen biologické pouto</h3>
+        <p>Když se pan Zelený, po několika letech života sám staral o svého syna, potkal partnerku, která vychovávala stejně starého chlapce. Jejich vztah se postupně prohluboval, až se rozhodli spojit své domácnosti a vytvořit společnou rodinu. Oba chlapci si na sebe zvykli a začali vyrůstat jako bratři. Sdíleli každodenní radosti, školní starosti i společné zážitky.</p>
+        <p>Po několika letech však přišla nečekaná životní změna. Partnerka od rodiny odešla a svého syna zanechala v péči pana Zeleného. Pro chlapce to byla velmi bolestná situace, ale jedno měl jisté – v rodině, kterou znal a kde se cítil bezpečně, mohl zůstat.</p>
+        <p>Pan Zelený neváhal. Věděl, že chlapec potřebuje stabilitu, jistotu a člověka, který za ním bude stát. Rozhodl se proto podniknout všechny potřebné kroky, aby mohl o syna své bývalé partnerky pečovat i nadále. Přijal ho do pěstounské péče a převzal za něj plnou rodičovskou odpovědnost.</p>
+        <p>Dnes oba chlapci dál vyrůstají společně pod jednou střechou. Přestože nejsou biologickými sourozenci, jejich vztah je pevný a přirozený. Pan Zelený chlapcům poskytuje bezpečný domov, podporu a zázemí, které každé dítě potřebuje.</p>
+        <p>Jejich příběh ukazuje, že skutečné rodičovství není založeno pouze na pokrevním příbuzenství. Někdy vzniká z každodenní péče, odpovědnosti a rozhodnutí být dítěti nablízku i v těch nejtěžších chvílích. Jsme rádi, že můžeme tuto rodinu doprovázet na jejich společné cestě a být svědky toho, jak silné mohou být vztahy postavené na důvěře, lásce a vzájemném přijetí.</p>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -225,5 +307,36 @@
   <div class="foot-bottom wrap">© 2026 Centrum JUSTY z.ú. — sociálně-právní ochrana dětí v Praze a Středočeském kraji</div>
 </footer>
 
+<script>
+  var poptavkaForm = document.getElementById('poptavka-form');
+  if (poptavkaForm) {
+    poptavkaForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var status = document.getElementById('poptavka-status');
+      var submitBtn = poptavkaForm.querySelector('button[type="submit"]');
+      status.textContent = 'Odesílám…';
+      submitBtn.disabled = true;
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(poptavkaForm)
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (result) {
+          submitBtn.disabled = false;
+          if (result.success) {
+            status.textContent = 'Děkujeme, formulář byl odeslán. Ozveme se vám co nejdříve.';
+            poptavkaForm.reset();
+          } else {
+            status.textContent = 'Něco se nepovedlo. Napište nám prosím přímo na centrumjusty@gmail.com.';
+          }
+        })
+        .catch(function () {
+          submitBtn.disabled = false;
+          status.textContent = 'Něco se nepovedlo. Napište nám prosím přímo na centrumjusty@gmail.com.';
+        });
+    });
+  }
+</script>
 </body>
 </html>
