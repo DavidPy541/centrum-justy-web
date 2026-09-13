@@ -10,11 +10,13 @@
   --line:#DED2B4;
 }
 *{box-sizing:border-box;}
+html{scroll-padding-top:96px;}
 body{margin:0;background:var(--cream);color:var(--ink);font-family:'Work Sans',sans-serif;line-height:1.6;}
 h1,h2,h3{font-family:'Fraunces',serif;font-weight:500;margin:0 0 .5em;color:var(--ink);}
 a{color:inherit;text-decoration:none;}
 .wrap{max-width:1080px;margin:0 auto;padding:0 32px;}
-header{border-bottom:1px solid var(--line);}
+header{border-bottom:1px solid var(--line);position:sticky;top:0;z-index:100;background:var(--cream);}
+.hidden-temp{display:none !important;}
 .headrow{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
 .brand{display:flex;align-items:center;gap:10px;}
 .brand img{height:52px;}
