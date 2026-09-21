@@ -2,337 +2,38 @@
 <html lang="cs">
 <head>
 <meta charset="UTF-8">
-<title>O nás — Centrum JUSTY z.ú.</title>
+<title>Centrum JUSTY z.ú.</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F7F2E7;
+    --ink:#2A2924;
+    --ink-soft:#5A574C;
+    --terracotta:#2F6690;
+    --terracotta-dark:#1F4A69;
+    --line:#DED2B4;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--cream);color:var(--ink);font-family:'Work Sans',sans-serif;text-align:center;padding:32px;}
+  .box{max-width:480px;}
+  .box img{height:64px;margin-bottom:28px;}
+  h1{font-family:'Fraunces',serif;font-weight:500;font-size:28px;margin:0 0 16px;color:var(--ink);}
+  p{font-size:16px;color:var(--ink-soft);line-height:1.6;margin:0 0 8px;}
+  .contact{margin-top:28px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:var(--ink-soft);}
+  .contact a{color:var(--terracotta-dark);text-decoration:none;font-weight:500;}
+</style>
 </head>
 <body>
-
-<header>
-  <div class="wrap headrow">
-    <a href="index.html" class="brand"><img src="assets/logo.png" alt="logo"><span>Centrum JUSTY z.ú.</span></a>
-    <nav>
-      <div class="has-dropdown">
-        <a href="o-nas.html" class="drop-trigger">O nás<span class="caret">⌄</span></a>
-        <div class="dropdown">
-          <div class="dropdown-inner">
-            <a href="o-nas.html#kdo-jsme">Kdo jsme</a>
-            <a href="o-nas.html#poslani">Poslání</a>
-            <a href="o-nas.html#komu-sluzby">Komu jsou naše služby určeny</a>
-            <a href="o-nas.html#zasady">Zásady</a>
-            <a href="o-nas.html#nas-tym">Náš tým</a>
-            <a href="o-nas.html#eticky-kodex">Etický kodex</a>
-          </div>
-        </div>
-      </div>
-      <div class="has-dropdown">
-        <a href="aktivity-projekty.html" class="drop-trigger">Aktivity/Projekty<span class="caret">⌄</span></a>
-        <div class="dropdown">
-          <div class="dropdown-inner">
-            <a href="aktivity-projekty.html#pestounska-pece">Pěstounská péče</a>
-            <a href="aktivity-projekty.html#osvojeni">Osvojení</a>
-            <a href="aktivity-projekty.html#sluzby-pestounske-rodiny">Služby pro pěstounské rodiny</a>
-            <a href="aktivity-projekty.html#nad-ramec-dohod">Nad rámec dohod</a>
-            <a href="aktivity-projekty.html#asistovane-kontakty">Asistované kontakty dítěte s rodiči a blízkými osobami</a>
-          </div>
-        </div>
-      </div>
-      <div class="has-dropdown">
-        <a href="kontakt.html" class="drop-trigger">Kontakt<span class="caret">⌄</span></a>
-        <div class="dropdown">
-          <div class="dropdown-inner">
-            <a href="kontakt.html#kontakt">Kontakt</a>
-            <a href="kontakt.html#jak-se-dostanete">Jak se k nám dostanete</a>
-            <a href="jak-to-u-nas-vypada.html">Jak to u nás vypadá</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <a class="cta hidden-temp" href="index.html#darovat">Chci darovat</a>
-  </div>
-</header>
-
-<section class="page-title">
-  <div class="wrap">
-    <div class="kicker">O nás</div>
-    <h1>Kdo jsme a čím se řídíme</h1>
-  </div>
-</section>
-
-<section id="kdo-jsme">
-  <div class="wrap intro-wrap">
-    <h2>Kdo jsme</h2>
-    <p>Jsme nezisková organizace, která poskytuje komplexní podporu pěstounským rodinám.</p>
-    <p>Pověření k výkonu sociálně-právní ochrany v rozsahu: Poskytování odborné poradenské a další pomoci a podpory osobě, s níž pověřená osoba uzavřela dohodu o výkonu pěstounské péče (dle § 47b zákona o SPOD), při výkonu pěstounské péče a sledování výkonu pěstounské péče, a poskytování pomoci osobě, jíž byl blíže určen obsah a zaměření povinnosti zvyšovat si znalosti a dovednosti v oblasti výchovy a péče o dítě podle § 12 odst. 2 zákona o SPOD.</p>
-    <p>Podílíme se na propagaci náhradní rodinné péče a organizujeme přednášky pro širokou veřejnost zaměřené na výchovu a vývoj dětí, vztahy a komunikaci v rodině.</p>
-  </div>
-</section>
-
-<section id="poslani" class="projects">
-  <div class="wrap intro-wrap">
-    <h2>Posláním Centra JUSTY z.ú. je</h2>
-    <p>Podpora:</p>
-    <ul class="goals">
-      <li>osob pečujících</li>
-      <li>osob v evidenci a dětí jim svěřených, rodičů těchto dětí v souvislosti s výkonem pěstounské péče</li>
-      <li>biologických dětí osob pečujících a osob v evidenci</li>
-      <li>osvojitelů</li>
-      <li>zájemců o osvojení a pěstounskou péči, a to prostřednictvím doprovázení, poradenství a dalších odborných služeb, s cílem naplnit právo dítěte vyrůstat ve stabilním rodinném prostředí</li>
-    </ul>
-  </div>
-</section>
-
-<section id="komu-sluzby">
-  <div class="wrap intro-wrap">
-    <h2>Komu jsou naše služby určeny</h2>
-    <p>V rámci dohod o výkonu pěstounské péče poskytujeme své služby:</p>
-    <ul class="goals">
-      <li>osobám pečujícím</li>
-      <li>osobám v evidenci</li>
-      <li>dětem jim svěřeným</li>
-      <li>rodičům těchto dětí v souvislosti s výkonem pěstounské péče a vztahem ke svěřenému dítěti</li>
-      <li>biologickým dětem osob pečujících a osob v evidenci</li>
-    </ul>
-  </div>
-</section>
-
-<section id="zasady" class="projects">
-  <div class="wrap intro-wrap">
-    <h2>Zásady činnosti</h2>
-
-    <div class="principle">
-      <h3>Respekt k právům dítěte</h3>
-      <ul class="goals">
-        <li>Hlavním kritériem kvality naší práce jsou vždy nejlepší zájem dítěte a jeho zdravý rozvoj.</li>
-        <li>Klademe důraz na respektování práv dítěte dle Úmluvy o právech dítěte, a to zejména práva na ochranu, péči a rodinné zázemí.</li>
-      </ul>
-    </div>
-
-    <div class="principle">
-      <h3>Participace</h3>
-      <ul class="goals">
-        <li>Podporujeme aktivní zapojení dětí a náhradních rodičů do rozhodovacích procesů, které se jich týkají. Děti i náhradní rodiče mají vždy prostor vyjádřit své názory, přání a obavy.</li>
-        <li>S dětmi jednáme s ohledem na jejich věk a vyspělost. Podporujeme jejich právo na spolurozhodování o záležitostech, které ovlivňují jejich život (např. volba školy, volnočasových aktivit, vztah k biologické rodině apod.).</li>
-      </ul>
-    </div>
-
-    <div class="principle">
-      <h3>Ochrana osobních údajů, zákonnost</h3>
-      <ul class="goals">
-        <li>Zaměstnanci jednají vždy v souladu s platnými zákony a předpisy, zejména se zákonem o sociálně-právní ochraně dětí, občanským zákoníkem, nařízením GDPR a dalšími relevantními právními normami.</li>
-        <li>Zaměstnanci postupují v souladu s metodikami a směrnicemi organizace, Centrum JUSTY z.ú. podporuje profesní vzdělávání i sebereflexi (supervizi) svých zaměstnanců v souladu s aktuálními postupy v oblasti sociálně právní ochrany dětí.</li>
-        <li>Osobní údaje dětí, náhradních rodičů a biologických rodin jsou chráněny v souladu s právními předpisy (zejména nařízení GDPR a zákonem o ochraně osobních údajů).</li>
-        <li>Veškeré osobní údaje jsou zpracovávány a uchovávány v zabezpečených systémech s omezeným přístupem pouze pro oprávněné osoby.</li>
-        <li>Organizace zpracovává pouze údaje, které jsou nezbytné pro poskytování SPOD.</li>
-        <li>Zaměstnanci organizace jsou vázáni mlčenlivostí a neposkytují informace o dětech a rodinách třetím stranám bez výslovného souhlasu nebo zákonné povinnosti.</li>
-        <li>Náhradní rodiče a děti (pokud to jejich věk a rozumová vyspělost umožňuje) jsou informováni o tom, jak jsou jejich osobní údaje zpracovávány, jak jsou chráněny a jak mohou využít svá práva (např. právo na přístup, opravu nebo výmaz údajů).</li>
-      </ul>
-    </div>
-
-    <div class="principle">
-      <h3>Individuální přístup</h3>
-      <ul class="goals">
-        <li>Každé dítě a rodina jsou jedineční, proto poskytujeme individuálně přizpůsobenou podporu na základě potřeb konkrétního dítěte a jeho náhradní rodiny.</li>
-        <li>Při své práci zohledňujeme specifika dětí s handicapem, dětí se specifickými výchovnými problémy a dětí traumatizovaných.</li>
-      </ul>
-    </div>
-
-    <div class="principle">
-      <h3>Multidisciplinární spolupráce</h3>
-      <ul class="goals">
-        <li>Podporujeme multidisciplinární spolupráci všech zainteresovaných subjektů (děti, náhradní rodiny, biologické rodiny, sociální pracovníci, psychologové, terapeuti, pedagogové, lékaři, právníci aj.) se zvláštním důrazem na spolupráci s místně příslušným OSPOD.</li>
-        <li>Zaměstnanci podporují komunikaci mezi školami, zdravotnickými zařízeními, terapeutickými službami a dalšími institucemi, které se podílejí na péči o dítě.</li>
-      </ul>
+  <div class="box">
+    <img src="assets/logo.png" alt="Centrum JUSTY z.ú.">
+    <h1>Připravujeme pro vás nové stránky</h1>
+    <p>Brzy budeme zpět.</p>
+    <div class="contact">
+      <p>Centrum JUSTY z.ú.</p>
+      <p>Tel: 602 214 797 &nbsp;·&nbsp; <a href="mailto:centrumjusty@gmail.com">centrumjusty@gmail.com</a></p>
     </div>
   </div>
-</section>
-
-<section id="nas-tym">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="kicker">Náš tým</div>
-      <h2>Lidé, kteří vás budou doprovázet</h2>
-    </div>
-
-    <div class="team-member">
-      <h3>Bc. Zuzana Moravcová</h3>
-      <p class="team-role">vedoucí SPOD v Centrum JUSTY z.ú.</p>
-      <p>Několik let pracovala ve farmaceutickém odvětví. V posledních letech se ale již dlouhodobě věnuje práci s dětmi a rodinami. Sama je maminka tří dětí.</p>
-      <p>Vystudovala VŠ zdravotní, psychosociálních studií a sociální práce. Absolvovala pětiletý psychoterapeutický výcvik, Daseinsanalytický výcvik – psychoterapie, roční krizovou intervenci (Systemický přístup při práci s krizí, 2019–2020), zkoušku odborné způsobilosti při sociálně-právní ochraně dětí a studium na BIVŠ a.s. Bankovní institut – obor ekonomie a managment ve zdravotnictví a sociálních službách. Pravidelně se účastní supervizí, akreditovaných seminářů a dalších odborných kurzů.</p>
-      <p>Při práci je pro Zuzanu důležité bezpečí a komplexní podpora klientů. Má dlouhodobé zkušenosti v oblasti sociálně-právní ochraně dětí. V Centru JUSTY vede projekty pro náhradní rodiny, koordinuje práci s náhradními rodinami a také je klíčovou pracovnicí pro několik náhradních rodin.</p>
-    </div>
-
-    <div class="team-member">
-      <h3>Bc. Marcela Kulhavá</h3>
-      <p class="team-role">klíčová pracovnice</p>
-      <p>Maminka dvou dětí. Je absolventkou Palackého univerzity v Olomouci, kde vystudovala obor Sociální pedagogika. V oblasti psychoterapie se dlouhodobě vzdělává a věnuje, jak individuální, tak skupinové práci. Absolvovala sebezkušenostní výcvik zaměřený na individuální a skupinovou terapii v rámci daseinsanalytického přístupu. Dále si doplnila vzdělání v kurzu komplexní krizové intervence a pravidelně se účastní supervizí, akreditovaných seminářů a dalších odborných kurzů.</p>
-      <p>Pracovní i osobní zkušenosti ji dávají hlubší vhled a dostatek praxe k tomu, aby Vás mohla provázet nelehkým obdobím, které se často dotýká nejen dítěte, ale rodiny jako celku. Ve své práci klade důraz na vytvoření bezpečného a respektujícího prostoru pro vyjádření všech zúčastněných stran. Každý člen rodiny má své vlastní emoce, potřeby i prožívání náročných či krizových situací, ve kterých se právě nachází.</p>
-      <p>Cílem Marcely je, aby byl každý Váš hlas dostatečně vyslyšen, pochopen a přijat, a abyste na tuto cestu nemuseli být sami. Věří ve smysl sdílení a v sílu bezpečného prostoru, kde může člověk svobodně mluvit o čemkoliv bez obav z hodnocení či odsouzení. Terapie pro ni není jen profesí, ale i životní cestou. Věří, že každý člověk si zaslouží mít někoho, komu může důvěřovat, a kdo ho bude na jeho cestě podporovat.</p>
-      <p>Pracovní zkušenosti získala mimo jiné při práci s klienty v oblasti adiktologie, konkrétně v Psychiatrické nemocnici Bohnice. Tato zkušenost jí přinesla hluboký vhled do problematiky závislostí a krizových situací.</p>
-    </div>
-  </div>
-</section>
-
-<section id="eticky-kodex">
-  <div class="wrap intro-wrap">
-    <h2>Etický kodex sociálního pracovníka České republiky</h2>
-
-    <p>1. Sociální práce je profese a akademická disciplína, která podporuje sociální změnu, sociální rozvoj, řešení problémů v mezilidských vtazích, sociální rovnost, posílení a zmocnění osob v nepříznivé sociální situaci. Ústředními jsou pro sociální práci principy sociální spravedlnosti, respektování lidských práv, osobnosti jedince, rozmanitosti skupin a jejich specifik.</p>
-    <p>2. Etický kodex sociálních pracovníků České republiky (dále jen kodex) vychází z Všeobecné deklarace lidských práv, z Listiny základních práv a svobod České republiky, ze Zákona 108/2006 Sb., o sociálních službách a navazuje na zásady etiky sociální práce definované Mezinárodní federací sociální práce.</p>
-    <p>3. Je nejen posláním, ale i povinností sociálního pracovníka vykonávat sociální práci svědomitě, zodpovědně, iniciovat spolupráci multidisciplinárních týmů a dodržovat při výkonu této profese nejvyšší možné standardy profesionality v souladu s právními předpisy a dostupnými vědeckými poznatky.</p>
-    <p>4. Závazek k respektování etiky sociální práce je základním aspektem kvality výkonu sociální práce. Etické povědomí je zásadní a neoddělitelnou součástí profesní činnosti každého sociálního pracovníka.</p>
-    <p>5. Hlavním cílem kodexu je snaha o naplnění sociální práce, tak jak je uvedena v mezinárodní definici Mezinárodní federace sociálních pracovníků a Mezinárodní asociace škol sociální práce (IFSW/IASSW) z roku 2014.</p>
-    <p>6. Kromě toho kodex upravuje pravidla zodpovědnosti a etického chování sociálního pracovníka ve vztahu ke:</p>
-    <ul class="goals">
-      <li>klientovi sociální služby</li>
-      <li>zaměstnavateli, u kterého vykonává sociální práci, kolegům v sociální práci</li>
-      <li>profesi a odbornosti sociálního pracovníka, společnosti</li>
-    </ul>
-    <p>7. Respektování a dodržování kodexu je v zájmu rozvoje etiky sociální práce jako profese a odborného růstu každého sociálního pracovníka bez ohledu na členství ve výše uvedených profesních organizacích.</p>
-
-    <h3 style="font-size:22px;color:var(--terracotta-dark);margin:36px 0 18px;">Hodnoty sociální práce</h3>
-    <p>Sociální práce je dynamicky se rozvíjející profese založena na hodnotách sociální změny, sociální rovnosti, lidské důstojnosti a mezilidských vztazích.</p>
-
-    <div class="principle">
-      <h3>Lidská důstojnost</h3>
-      <p>Sociální pracovník přistupuje ke každé osobě důstojně, s ohledem na individuální rozdíly a v kontextu respektování a dodržování lidských práv. Podporuje vlastní zodpovědnost a autonomii každé osoby s ohledem na nejen individuální potřeby osoby, ale i její možnosti, schopnosti a dovednosti.</p>
-    </div>
-
-    <div class="principle">
-      <h3>Sociální změna</h3>
-      <p>Sociální pracovník zajišťuje každé osobě rovný přístup ke srozumitelným informacím a potřebným zdrojům. Podporuje osobu v procesu rozhodování, dosažení sociální změny a vyřešení nepříznivé sociální situace. Vytváří každé osobě rovné podmínky pro poskytování a využívání sociální služby.</p>
-    </div>
-
-    <div class="principle">
-      <h3>Sociální rovnost</h3>
-      <p>Sociální pracovník zajišťuje rovnost každé osobě bez ohledu na původ, barvu pleti, rasu, etnickou příslušnost, národnost, jazyk, věk, pohlaví, rod, sexuální orientaci, zdravotní stav, náboženské vyznání, politické přesvědčení, manželský a rodinný stav a sociálně-ekonomický status. Přispívá k odstranění projevů a příčin sociální nespravedlnosti, diskriminace, útlaku a bariér vedoucích k sociálnímu vyloučení.</p>
-    </div>
-
-    <div class="principle">
-      <h3>Mezilidské vztahy</h3>
-      <p>Sociální pracovník chápe důležitost mezilidských vztahů klienta a podporuje jej v udržování, utváření a podílí se na řešení problémů. Taktéž buduje a rozvíjí profesionální vztahy s kolegy a spolupracuje s odborníky z dalších institucí a profesí.</p>
-    </div>
-
-    <div class="principle">
-      <h3>Mlčenlivost a diskrétnost</h3>
-      <p>Pro sociálního pracovníka platí při výkonu své profese pravidlo mlčenlivosti a diskrétnosti úkonů sociální služby. Povinností mlčenlivosti je zavázán a platí i po skončení poskytování sociální služby nebo ukončení pracovního poměru.</p>
-    </div>
-
-    <h3 style="font-size:22px;color:var(--terracotta-dark);margin:36px 0 18px;">Etická zodpovědnost</h3>
-    <p>Hodnoty sociální práce jsou vyjádřeny při výkonu profese eticky zodpovědným rozhodováním a konáním. Etická zodpovědnost sociálního pracovníka se projevuje vůči klientovi sociální služby, zaměstnavateli, u kterého vykonává sociální práci, kolegům v sociální práci, profesi i vlastní odbornosti a společnosti. Prvořadá je zodpovědnost sociálního pracovníka vůči klientovi.</p>
-
-    <div class="principle">
-      <h3>Etická zodpovědnost ke klientovi sociální služby</h3>
-      <ul class="goals">
-        <li>Podporuje klienta k vědomí vlastní odpovědnosti.</li>
-        <li>Jedná tak, aby chránil důstojnost a lidská práva klienta.</li>
-        <li>Vyvaruje se jakékoliv diskriminace klienta.</li>
-        <li>Chrání klientovo právo na soukromí.</li>
-        <li>Zaměřuje se na klientovy silné stránky a podporuje jej při řešení dalších sfér jeho života.</li>
-        <li>Nepoškozuje klienta, nevyjadřuje se o něm hanlivě, neznevažuje jeho osobu ani nepříznivou životní situaci.</li>
-        <li>Jedná s klientem bezúhonně, s účastí, respektem, vytváří s ním vztah založený na důvěře.</li>
-        <li>Respektuje klientovu příslušnost k sociálním skupinám, národnosti i jeho etnickou a kulturní různorodost.</li>
-        <li>Podporuje, posilňuje a zmocňuje klienta k vlastní zodpovědnosti a usiluje o dosažení co největší míry jeho autonomie a participace na rozhodování.</li>
-        <li>Zajímá se o celého člověka v rámci rodiny, komunity, společenského a přirozeného prostředí.</li>
-        <li>Přispívá k začlenění klienta do sociální sítě a napomáhá při řešení problémů v dalších aspektech jeho života.</li>
-        <li>Informuje klienta o možných rizicích a důsledcích při jeho rozhodování.</li>
-        <li>Akceptuje rozhodnutí klienta o ukončení sociální služby. Je však povinen poskytnout informace o jiných službách v případě, že jsou nadále potřebné.</li>
-      </ul>
-    </div>
-
-    <div class="principle">
-      <h3>Etická zodpovědnost k zaměstnavateli</h3>
-      <ul class="goals">
-        <li>Plní odpovědně povinnosti vyplývající z pracovní smlouvy a pracovní náplně.</li>
-        <li>Přispívá v organizaci k vytvoření takových podmínek, které napomáhají přijmutí a uplatnění závazků tohoto kodexu.</li>
-        <li>Snaží se ovlivnit kvalitu poskytovaných sociálních služeb, pracovní postupy a jejich praktické uplatňování s ohledem na co nejvyšší profesionalizaci.</li>
-        <li>Předchází a odstraňuje všechny formy diskriminace a násilí na pracovišti.</li>
-      </ul>
-    </div>
-
-    <div class="principle">
-      <h3>Etická zodpovědnost ke kolegům v sociální práci</h3>
-      <ul class="goals">
-        <li>Respektuje znalosti a zkušenosti kolegů a spolupracuje s nimi.</li>
-        <li>Respektuje rozdíly v jejich názorech, kritiku vyjadřuje vhodným způsobem.</li>
-        <li>Zapojuje se do diskuzí a podporuje kolektivní diskuzi a dialog.</li>
-        <li>Dodržuje jednotný přístup ke klientovi sjednaný v rámci organizace.</li>
-        <li>Nepoškozuje kolegu, nevyjadřuje se o něm hanlivě, neznevažuje jeho osobu.</li>
-        <li>Poskytuje kolegům zpětnou vazbu a připomínky k práci kolegů vyjadřuje na vhodném místě a přiměřeným způsobem.</li>
-        <li>Profesi sociální práce vykonává multidisciplinárně ve spolupráci s jinými odborníky a organizacemi, které mohou napomoci sociálnímu začlenění klienta.</li>
-      </ul>
-    </div>
-
-    <div class="principle">
-      <h3>Etická zodpovědnost k profesi a odbornosti sociálního pracovníka</h3>
-      <ul class="goals">
-        <li>Udržuje a zvyšuje prestiž profese, vyzdvihuje etické hodnoty, odborné poznatky a poslání sociální práce.</li>
-        <li>Snaží se o udržení a zvýšení odborné úrovně sociální práce a uplatňování nových přístupů a metod.</li>
-        <li>Je zodpovědný za své soustavné celoživotní vzdělávání, což je základ pro udržení úrovně odborné práce a schopnosti řešit etické problémy.</li>
-        <li>Pro svůj odborný růst využívá znalosti a dovednosti svých kolegů a jiných odborníků, naopak své znalosti a dovednosti rozšiřuje v celé oblasti sociální práce.</li>
-        <li>Spolupracuje se školami sociální práce, aby podpořil studenty sociální práce při získávání kvalitního praktického výcviku a aktuální praktické znalosti.</li>
-        <li>Vystupuje profesionálně a důvěryhodně.</li>
-        <li>Má právo i povinnost pečovat o své zdraví a duševní hygienu tak, aby byl schopen poskytovat kvalitní a profesionální sociální služby.</li>
-        <li>Zodpovědně nakládá se svými kompetencemi při sociální práci a neutváří klienta závislým na sociální službě.</li>
-      </ul>
-    </div>
-
-    <div class="principle">
-      <h3>Etická zodpovědnost ke společnosti</h3>
-      <ul class="goals">
-        <li>Má právo i povinnost upozorňovat veřejnost a příslušné orgány na případy porušování zákonů a oprávněných zájmů občanů.</li>
-        <li>Zasazuje se o zlepšení sociálních podmínek a zvyšování sociální spravedlnosti tím, že podněcuje změny v zákonech, v politice státu i v politice mezinárodní.</li>
-        <li>Upozorňuje na možnost spravedlivějšího rozdílení společenských zdrojů a potřebu zajistit přístup k těmto zdrojům těm, kteří to potřebují.</li>
-        <li>Působí na rozšíření možností a příležitostí ke zlepšení kvality života osob, a to se zvláštním zřetelem ke znevýhodněným a postiženým jedincům i skupinám.</li>
-        <li>Působí na zlepšení podmínek, které zvyšují vážnost a úctu ke kulturám, které vytvořilo lidstvo.</li>
-        <li>Usiluje o uznání profese sociální práce ve vztahu k odpovědnosti vůči společnosti.</li>
-        <li>Je zodpovědný za své jednání vůči osobám, se kterými pracuje, vůči kolegům, zaměstnavateli, profesním organizacím.</li>
-      </ul>
-    </div>
-
-    <h3 style="font-size:22px;color:var(--terracotta-dark);margin:36px 0 18px;">Etické problémy a dilemata</h3>
-    <p>Sociální pracovník se při své práci setkává s různými etickými problémy a dilematy vyvstávajícími ze samotné podstaty sociální práce, která pro něj vytváří situace. Musí nejen eticky hodnotit, vybírat možnosti, ale i rozhodovat. Eticky uvažuje při sociálním řešení, sběru informací, jednáních a při své profesionální činnosti o použití metod sociální práce, o sociálně technických opatřeních a administrativně správných postupech z hlediska účelu, účinnosti a důsledku na klientův život.</p>
-    <p>Sociální pracovník může iniciovat vznik poradního orgánu v organizaci, který má přispět k profesionální a etické citlivosti při řešení každodenních situací a problémů v sociální službě.</p>
-
-    <h3 style="font-size:22px;color:var(--terracotta-dark);margin:36px 0 18px;">Závaznost etického kodexu</h3>
-    <p>Ke kodexu jako dokumentu podporujícímu etiku sociální práce a profese sociálního pracovníka se hlásí Profesní svaz sociálních pracovníků Asociace poskytovatelů sociálních služeb České republiky, Společnost sociálních pracovníků České republiky a Profesní komora sociálních pracovníků. Pro členy těchto profesních organizací je kodex závazným.</p>
-    <p>Kodex je jedním ze základních předpokladů profesionálního výkonu sociální práce a důvěryhodnosti profese ve společnosti, proto je jeho dodržování v zájmu všech sociálních pracovníků.</p>
-    <p>Znalost, dodržování a šíření principů kodexu se doporučuje i u studentů sociální práce, obzvláště k výkonu odborné praxe.</p>
-
-    <h3 style="font-size:22px;color:var(--terracotta-dark);margin:36px 0 18px;">Závěr</h3>
-    <p>V celém textu kodexu se pod označením sociální pracovník chápe jak pracovník, tak pracovnice. Podobně jako při označení klient.</p>
-    <p>Termín sociální služby vyjadřuje všechny odborné činnosti, které vykonává sociální pracovník.</p>
-    <p>V procesu vzniku kodexu bylo přihlédnuto k následujícím dokumentům:</p>
-    <ul class="goals">
-      <li>Zákon 108/2006 Sb., o sociálních službách v platném znění</li>
-      <li>Mezinárodní etický kodex „Etika v sociální práci – vyhlášené principy" (IFSW/IASSW, 2004)</li>
-      <li>Etický kodex sociálních pracovníků Slovenské republiky (2015)</li>
-      <li>Etický kodex sociálních pracovníků České republiky (2006)</li>
-      <li>Jiné národní kodexy sociální práce</li>
-    </ul>
-    <p>Kodex nemůže nahradit vlastní, vnitřní motivaci a zodpovědnost každého sociálního pracovníka a představuje minimální standardy eticky zodpovědného konání při výkonu profese sociální práce.</p>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <div>
-      <h3>Centrum JUSTY z.ú.</h3>
-      <p>K Horkám 19/21<br>Praha 10 – Hostivař</p>
-    </div>
-    <div>
-      <h3>Kontakt</h3>
-      <p>Tel: 602 214 797<br>centrumjusty@gmail.com<br>IDDS: 48hswgb</p>
-    </div>
-    <div>
-      <h3>Navigace</h3>
-      <p><a href="o-nas.html">O nás</a><br><a href="aktivity-projekty.html">Aktivity/Projekty</a><br><a href="index.html#pribehy">Příběhy rodin</a><br><a href="kontakt.html">Kontakt</a></p>
-    </div>
-  </div>
-  <div class="foot-bottom wrap">© 2026 Centrum JUSTY z.ú. — sociálně-právní ochrana dětí v Praze a Středočeském kraji</div>
-</footer>
-
 </body>
 </html>
