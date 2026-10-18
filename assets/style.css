@@ -215,3 +215,22 @@ footer p, footer a{color:#C9BFAF;font-size:14px;}
   .intro-wrap > h2{font-size:24px;}
   .donate-card{padding:22px 18px;}
 }
+
+/* top-level nav link without dropdown */
+.nav-link{display:block;}
+@media (max-width:900px){
+  .nav-link{padding:14px 2px;font-weight:500;border-bottom:1px solid var(--line);}
+}
+
+/* events (loaded from Google Sheet) */
+.events{display:grid;gap:18px;}
+.event{display:grid;grid-template-columns:110px 1fr;gap:22px;background:#fff;border:1px solid var(--line);border-left:3px solid var(--terracotta);border-radius:10px;padding:22px 24px;}
+.event-date{font-family:'Fraunces',serif;font-size:26px;line-height:1.15;color:var(--terracotta-dark);}
+.event-date-long{font-size:15px;font-family:'Work Sans',sans-serif;font-weight:500;color:var(--ink-soft);}
+.event-body h3{font-size:21px;margin:0 0 6px;}
+.event-body p{margin:0 0 12px;color:var(--ink-soft);font-size:15px;}
+.event-body .event-time{font-weight:500;color:var(--ink);}
+.event-body .btn-outline{display:inline-block;margin-top:4px;}
+@media (max-width:600px){
+  .event{grid-template-columns:1fr;gap:8px;padding:18px;}
+}
