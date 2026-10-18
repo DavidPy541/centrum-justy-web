@@ -2,38 +2,170 @@
 <html lang="cs">
 <head>
 <meta charset="UTF-8">
-<title>Centrum JUSTY z.ú.</title>
+<title>Aktivity/Projekty — Centrum JUSTY z.ú.</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --cream:#F7F2E7;
-    --ink:#2A2924;
-    --ink-soft:#5A574C;
-    --terracotta:#2F6690;
-    --terracotta-dark:#1F4A69;
-    --line:#DED2B4;
-  }
-  *{box-sizing:border-box;}
-  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--cream);color:var(--ink);font-family:'Work Sans',sans-serif;text-align:center;padding:32px;}
-  .box{max-width:480px;}
-  .box img{height:64px;margin-bottom:28px;}
-  h1{font-family:'Fraunces',serif;font-weight:500;font-size:28px;margin:0 0 16px;color:var(--ink);}
-  p{font-size:16px;color:var(--ink-soft);line-height:1.6;margin:0 0 8px;}
-  .contact{margin-top:28px;padding-top:24px;border-top:1px solid var(--line);font-size:14px;color:var(--ink-soft);}
-  .contact a{color:var(--terracotta-dark);text-decoration:none;font-weight:500;}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <div class="box">
-    <img src="assets/logo.png" alt="Centrum JUSTY z.ú.">
-    <h1>Připravujeme pro vás nové stránky</h1>
-    <p>Brzy budeme zpět.</p>
-    <div class="contact">
-      <p>Centrum JUSTY z.ú.</p>
-      <p>Tel: 602 214 797 &nbsp;·&nbsp; <a href="mailto:centrumjusty@gmail.com">centrumjusty@gmail.com</a></p>
+
+<header>
+  <div class="wrap headrow">
+    <a href="index.html" class="brand"><img src="assets/logo.png" alt="logo"><span>Centrum JUSTY z.ú.</span></a>
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+    <nav id="main-nav">
+      <div class="has-dropdown">
+        <a href="o-nas.html" class="drop-trigger">O nás<span class="caret">⌄</span></a>
+        <div class="dropdown">
+          <div class="dropdown-inner">
+            <a href="o-nas.html#kdo-jsme">Kdo jsme</a>
+            <a href="o-nas.html#poslani">Poslání</a>
+            <a href="o-nas.html#komu-sluzby">Komu jsou naše služby určeny</a>
+            <a href="o-nas.html#zasady">Zásady</a>
+            <a href="o-nas.html#nas-tym">Náš tým</a>
+            <a href="o-nas.html#eticky-kodex">Etický kodex</a>
+          </div>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="aktivity-projekty.html" class="drop-trigger">Aktivity/Projekty<span class="caret">⌄</span></a>
+        <div class="dropdown">
+          <div class="dropdown-inner">
+            <a href="aktivity-projekty.html#pestounska-pece">Pěstounská péče</a>
+            <a href="aktivity-projekty.html#doprovazeni">Doprovázení</a>
+            <a href="aktivity-projekty.html#vzdelavani">Vzdělávání</a>
+            <a href="aktivity-projekty.html#dlouhodoba-pece">Dlouhodobá péče</a>
+            <a href="aktivity-projekty.html#asistovane-kontakty">Asistované kontakty dítěte s rodiči a blízkými osobami</a>
+            <a href="aktivity-projekty.html#osvojeni">Osvojení</a>
+            <a href="aktivity-projekty.html#nad-ramec-dohod">Nad rámec dohod</a>
+          </div>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="dokumenty.html" class="drop-trigger">Dokumenty<span class="caret">⌄</span></a>
+        <div class="dropdown">
+          <div class="dropdown-inner">
+            <a href="assets/dokumenty/gdpr-klienti.pdf" target="_blank" rel="noopener">GDPR – klienti</a>
+            <a href="assets/dokumenty/gdpr-ostatni.pdf" target="_blank" rel="noopener">GDPR – ostatní</a>
+            <a href="assets/dokumenty/rozhodnuti-s-potvrzenim-pravni-moci.pdf" target="_blank" rel="noopener">Rozhodnutí s potvrzením právní moci</a>
+            <a href="assets/dokumenty/harmonogram-vzdelavani-psychohygiena.pdf" target="_blank" rel="noopener">Harmonogram vzdělávání – Psychohygiena pěstouna</a>
+          </div>
+        </div>
+      </div>
+      <div class="has-dropdown">
+        <a href="kontakt.html" class="drop-trigger">Kontakt<span class="caret">⌄</span></a>
+        <div class="dropdown">
+          <div class="dropdown-inner">
+            <a href="kontakt.html#kontakt">Kontakt</a>
+            <a href="kontakt.html#jak-se-dostanete">Jak se k nám dostanete</a>
+            <a href="jak-to-u-nas-vypada.html">Jak to u nás vypadá</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <a class="cta hidden-temp" href="index.html#darovat">Chci darovat</a>
+  </div>
+</header>
+
+<section class="page-title">
+  <div class="wrap">
+    <div class="kicker">Aktivity/Projekty</div>
+    <h1>Služby / podpora</h1>
+  </div>
+</section>
+
+<section id="pestounska-pece">
+  <div class="wrap intro-wrap">
+    <h2>Pěstounská péče</h2>
+    <p>Pěstounská péče je forma náhradní rodinné péče, při které dítě vyrůstá v bezpečném a pečujícím prostředí pěstounské rodiny.</p>
+    <p>Biologickým rodičům dítěte zpravidla zůstávají zachována jejich rodičovská práva a povinnosti. Pokud je to v nejlepším zájmu dítěte, podporuje se také jeho kontakt s biologickou rodinou a udržování vztahů s blízkými osobami.</p>
+    <p>Pěstoun o dítě každodenně pečuje, zajišťuje jeho potřeby a poskytuje mu bezpečí, stabilitu a podporu. V běžných záležitostech rozhoduje za dítě pěstoun, zatímco u významných rozhodnutí může být potřeba souhlas zákonného zástupce nebo rozhodnutí soudu.</p>
+    <p>Pěstounská péče je státem podporována prostřednictvím finančních dávek. Pěstoun zároveň není na péči o dítě sám – může využívat podporu doprovázející organizace, odborné poradenství, vzdělávání, odlehčovací služby a další formy podpory.</p>
+    <div class="principle">
+      <h3>Pěstounská péče na přechodnou dobu</h3>
+      <p>Pěstounská péče na přechodnou dobu je určena pro děti, u kterých není možné jejich situaci v daném okamžiku vyřešit dlouhodobě. Pěstoun na přechodnou dobu o dítě pečuje po nezbytně nutnou dobu, než se může vrátit do své původní rodiny, nebo než je pro něj nalezeno jiné dlouhodobé řešení, například péče v jiné náhradní rodině.</p>
+      <p>Pěstoun na přechodnou dobu poskytuje dítěti bezpečné a stabilní prostředí a pomáhá mu zvládnout období změn a nejistoty. Spolupracuje přitom s odborníky a dalšími osobami, které se podílejí na hledání vhodného řešení jeho situace.</p>
     </div>
   </div>
+</section>
+
+<section id="doprovazeni" class="projects">
+  <div class="wrap intro-wrap">
+    <h2>Doprovázení</h2>
+    <p>Každou pěstounskou rodinu provází klíčový pracovník, který je jí oporou při řešení každodenních i náročnějších situací spojených s péčí o dítě.</p>
+    <p>Klíčový pracovník rodinu navštěvuje minimálně jednou za dva měsíce, podle potřeby i častěji. Průběžně je rodině k dispozici také pro telefonické a e-mailové konzultace. V případě potřeby pěstouny doprovází při jednání s úřady, školou nebo při případových konferencích.</p>
+    <p>Společně s rodinou vytváří individuální plán doprovázení a plán vzdělávání, které vycházejí z aktuálních potřeb dítěte a rodiny.</p>
+  </div>
+</section>
+
+<section id="vzdelavani">
+  <div class="wrap intro-wrap">
+    <h2>Vzdělávání</h2>
+    <p>Nabízíme pěstounům bezplatné vzdělávání v zákonem stanoveném rozsahu 24 hodin ročně, které je zaměřeno na témata související s péčí o dítě, jeho potřebami a specifiky náhradní rodinné péče. Témata vzdělávání vycházejí z potřeb pěstounů a aktuální situace jednotlivých rodin.</p>
+    <p>Vzdělávání je příležitostí nejen k získání nových znalostí a praktických dovedností, ale také ke sdílení zkušeností s dalšími pěstouny a k hledání možností, jak lépe zvládat náročné situace spojené s péčí o dítě.</p>
+    <p>Vzdělávání probíhá formou jednodenních seminářů, podpůrných setkání a vzdělávacích pobytů.</p>
+  </div>
+</section>
+
+<section id="dlouhodoba-pece" class="projects">
+  <div class="wrap intro-wrap">
+    <h2>Dlouhodobá péče</h2>
+    <p>Pěstounským rodinám poskytujeme podporu při zajištění odlehčovací péče o děti starší 2 let v rozsahu minimálně 14 dnů ročně. Cílem je umožnit pěstounům potřebný čas na odpočinek, regeneraci nebo vyřízení osobních záležitostí a zároveň zajistit dítěti bezpečnou a kvalitní péči.</p>
+    <p>Odlehčovací péče může být zajištěna například formou:</p>
+    <ul class="goals">
+      <li>příspěvku na tábor nebo jinou vhodnou pobytovou aktivitu pro dítě,</li>
+      <li>úhrady péče osoby blízké dítěti nebo rodině, například babičky, jiného příbuzného, sousedky či kamarádky.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="asistovane-kontakty">
+  <div class="wrap intro-wrap">
+    <h2>Asistované kontakty dítěte s rodiči a blízkými osobami</h2>
+    <p>Podporujeme děti v pěstounské péči v udržování a rozvíjení vztahů s jejich rodiči, sourozenci a dalšími blízkými osobami. V situacích, kdy je kontakt potřeba podpořit nebo zajistit bezpečné a klidné prostředí pro jeho průběh, nabízíme také asistované kontakty.</p>
+    <p>Asistovaný kontakt probíhá za přítomnosti pracovníka naší organizace, který poskytuje podporu dítěti i dospělým účastníkům setkání. Pomáhá vytvářet bezpečné podmínky, podporuje vzájemnou komunikaci a v případě potřeby pomáhá zvládat náročné situace.</p>
+    <p>Cílem není nahrazovat vztah mezi dítětem a jeho rodičem, ale podpořit jejich kontakt tak, aby mohl probíhat s respektem k potřebám a bezpečí dítěte.</p>
+    <p>Každý kontakt nastavujeme individuálně s ohledem na věk a potřeby dítěte, jeho situaci a doporučení OSPOD. Společně se snažíme hledat takovou podobu kontaktu, která bude pro dítě co nejbezpečnější a zároveň umožní zachovat důležité rodinné vazby.</p>
+  </div>
+</section>
+
+<section id="osvojeni" class="projects">
+  <div class="wrap intro-wrap">
+    <h2>Osvojení</h2>
+    <p><strong>Osvojení (adopce)</strong> – osvojitelé nastupují na místo biologických rodičů, jsou uvedeni i v rodném listě a stávají se zákonnými zástupci dítěte.</p>
+    <p>Zájemcům o osvojení či pěstounskou péči a osvojitelům nabízíme:</p>
+    <p><strong>Poradenství</strong> – zajišťujeme jednorázové i dlouhodobé poradenství ve všech otázkách souvisejících s náhradní rodinnou péčí – zprostředkování osvojení a PP, zákonná úprava, dávky pěstounské péče, provázení procesem zprostředkování a přijetí konkrétního dítěte, výchovné problémy, otázky související s původní rodinou dítěte aj.</p>
+  </div>
+</section>
+<section id="nad-ramec-dohod">
+  <div class="wrap intro-wrap">
+    <h2>Nad rámec dohod o výkonu pěstounské péče nabízíme</h2>
+    <p><strong>Společné setkávání pěstounů</strong> – prostor pro sdílení zkušeností a vzájemnou podporu, tzv. Sdílející, svépomocné skupiny pěstounů. Termíny jsou vždy vypsané a vyvěšené na našich webových stránkách a jsou pravidelně uskutečňovány vždy každou sudou středu od 17 hodin do 18:30 hodin.</p>
+    <p><a class="btn-outline" href="#">Přihlásit se na skupinu</a></p>
+    <p><strong>Společné akce pro pěstouny</strong> – výlety, zajímavé aktivity – vyhlášené termíny akcí na webových stránkách Centra JUSTY z.ú.</p>
+    <p><strong>Den pro pěstouny</strong> – kulturní, relaxační, motivační a propojovací program.</p>
+    <p><a class="btn-outline" href="#">Přihlásit se na Den pro pěstouny</a></p>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <div>
+      <h3>Centrum JUSTY z.ú.</h3>
+      <p>K Horkám 19/21<br>Praha 10 – Hostivař</p>
+    </div>
+    <div>
+      <h3>Kontakt</h3>
+      <p>Tel: 602 214 797<br>centrumjusty@gmail.com<br>IDDS: 48hswgb</p>
+    </div>
+    <div>
+      <h3>Navigace</h3>
+      <p><a href="o-nas.html">O nás</a><br><a href="aktivity-projekty.html">Aktivity/Projekty</a><br><a href="index.html#pribehy">Příběhy rodin</a><br><a href="dokumenty.html">Dokumenty</a><br><a href="kontakt.html">Kontakt</a></p>
+    </div>
+  </div>
+  <div class="foot-bottom wrap">© 2026 Centrum JUSTY z.ú. — sociálně-právní ochrana dětí v Praze a Středočeském kraji</div>
+</footer>
+
+<script src="assets/nav.js" defer></script>
 </body>
 </html>
