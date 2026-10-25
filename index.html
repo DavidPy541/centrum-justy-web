@@ -6,6 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#F7F2E7">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -64,8 +69,9 @@
           </div>
         </div>
       </div>
+      <a class="cta nav-cta" href="#darovat">Chci darovat</a>
     </nav>
-    <a class="cta" href="#darovat">Chci darovat</a>
+    <a class="cta head-cta" href="#darovat">Chci darovat</a>
   </div>
 </header>
 
@@ -119,31 +125,30 @@
         </div>
         <div>
           <h3>Podpořte naši činnost</h3>
-          <p>Dar poskytujete na činnost Centra JUSTY jako celku, nelze jej vázat na konkrétní projekt. Zvolte částku a zobrazíme číslo účtu i QR kód pro platbu v mobilním bankovnictví.</p>
+          <p>Zvolte částku a zobrazíme číslo účtu i QR kód pro platbu v mobilním bankovnictví.</p>
         </div>
       </div>
 
       <div class="donate-step">
         <span class="step-num">1</span>
         <div class="step-body">
-          <label for="donate-amount">Zvolte částku, jakou chcete darovat</label>
-          <select id="donate-amount">
-            <option value="200">200 Kč</option>
-            <option value="500">500 Kč</option>
-            <option value="1000" selected>1 000 Kč</option>
-            <option value="2000">2 000 Kč</option>
-            <option value="5000">5 000 Kč</option>
-            <option value="10000">10 000 Kč</option>
-            <option value="other">Jiná částka…</option>
-          </select>
-          <input type="number" id="donate-custom" min="1" max="1000000" step="1" placeholder="Zadejte částku v Kč" hidden class="donate-custom">
+          <label for="donate-amount" class="step-label">Výše příspěvku (Kč) <span class="req">*</span></label>
+          <div class="amount-picker">
+            <div class="amount-chips" role="group" aria-label="Rychlá volba částky">
+              <button type="button" class="amount-chip" data-amount="100">100 Kč</button>
+              <button type="button" class="amount-chip" data-amount="300">300 Kč</button>
+              <button type="button" class="amount-chip" data-amount="500">500 Kč</button>
+              <button type="button" class="amount-chip" data-amount="1000">1 000 Kč</button>
+            </div>
+            <input type="number" id="donate-amount" class="amount-input" min="1" max="1000000" step="1" inputmode="numeric" placeholder="0" aria-label="Vlastní částka v Kč">
+          </div>
         </div>
       </div>
 
       <div class="donate-step">
         <span class="step-num">2</span>
         <div class="step-body">
-          <label class="consent"><input type="checkbox" id="donate-vop"> Seznámil/a jsem se s <a href="assets/dokumenty/vop-dary.pdf" target="_blank" rel="noopener">Všeobecnými podmínkami pro poskytování darů</a> a souhlasím s nimi. Informace o zpracování osobních údajů najdete v <a href="assets/dokumenty/gdpr-ostatni.pdf" target="_blank" rel="noopener">zásadách ochrany osobních údajů</a>.</label>
+          <label class="consent"><input type="checkbox" id="donate-vop"> <span>Seznámil/a jsem se s <a href="assets/dokumenty/vop-dary.pdf" target="_blank" rel="noopener">Všeobecnými podmínkami pro poskytování darů</a> a souhlasím s nimi. Informace o zpracování osobních údajů najdete v <a href="assets/dokumenty/gdpr-ostatni.pdf" target="_blank" rel="noopener">zásadách ochrany osobních údajů</a>.</span></label>
         </div>
       </div>
 
@@ -151,18 +156,121 @@
         <span class="step-num">3</span>
         <div class="step-body">
           <p class="step-label">Odešlete Váš dar pomocí těchto platebních údajů</p>
-          <p id="donate-locked" class="donate-note" style="margin:0;">Platební údaje se zobrazí po potvrzení souhlasu s podmínkami.</p>
+          <p id="donate-locked" class="donate-note" style="margin:0;">Platební údaje se zobrazí po zadání částky a potvrzení souhlasu s podmínkami.</p>
           <div id="donate-details" class="donate-details" hidden>
             <div class="donate-fields">
               <div><span class="field-label">Číslo účtu</span><span class="field-value">1496624005 / 5500</span></div>
-              <div><span class="field-label">Částka</span><span class="field-value" id="donate-sum">1 000 Kč</span></div>
+              <div><span class="field-label">Částka</span><span class="field-value" id="donate-sum">–</span></div>
               <div><span class="field-label">Příjemce</span><span class="field-value">Centrum JUSTY z.ú.</span></div>
             </div>
             <div class="qr-placeholder" id="donate-qr" role="img" aria-label="QR kód pro platbu"></div>
           </div>
-          <a href="mailto:centrumjusty@gmail.com?subject=Potvrzeni%20o%20daru" class="donate-link">Chci získat potvrzení o daru</a>
+          <a href="#potvrzeni-daru" class="donate-link" data-toggle-form="potvrzeni-daru" aria-controls="potvrzeni-daru">Chci získat potvrzení o daru</a>
         </div>
       </div>
+
+      <form id="potvrzeni-daru" class="receipt-form" data-success="Děkujeme, žádost o potvrzení jsme přijali. Potvrzení vám pošleme e-mailem." hidden>
+        <input type="hidden" name="access_key" value="a951c080-5f55-45cc-844b-e0aa339f17e7">
+        <input type="hidden" name="subject" value="Žádost o potvrzení o daru – web Centrum JUSTY z.ú.">
+        <input type="hidden" name="from_name" value="Web Centrum JUSTY z.ú.">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+        <h3>Žádost o potvrzení o daru</h3>
+        <p class="receipt-intro">Potvrzení o daru můžete uplatnit v daňovém přiznání a snížit si tak základ daně. Abychom ho mohli vystavit, potřebujeme vědět, kdo dar poslal, a dohledat platbu na účtu. Bez těchto údajů potvrzení vystavit nelze. Pokud potvrzení nepotřebujete, formulář vyplňovat nemusíte – dar můžete poslat i bez něj.</p>
+
+        <fieldset class="form-block">
+          <legend>Dárce</legend>
+          <div class="seg" role="radiogroup" aria-label="Typ dárce">
+            <label><input type="radio" name="Typ dárce" value="Fyzická osoba" checked data-donor="osoba"> Fyzická osoba</label>
+            <label><input type="radio" name="Typ dárce" value="Firma" data-donor="firma"> Firma</label>
+          </div>
+          <div class="form-grid">
+            <div class="form-field" data-for="osoba">
+              <label for="r-jmeno">Jméno a příjmení <span class="req">*</span></label>
+              <input type="text" id="r-jmeno" name="Jméno a příjmení" autocomplete="name" required>
+            </div>
+            <div class="form-field" data-for="osoba">
+              <label for="r-narozeni">Datum narození <span class="req">*</span></label>
+              <input type="date" id="r-narozeni" name="Datum narození" autocomplete="bday" required>
+            </div>
+            <div class="form-field" data-for="firma" hidden>
+              <label for="r-firma">Název firmy / organizace <span class="req">*</span></label>
+              <input type="text" id="r-firma" name="Název firmy" autocomplete="organization" disabled required>
+            </div>
+            <div class="form-field" data-for="firma" hidden>
+              <label for="r-ico">IČO <span class="req">*</span></label>
+              <input type="text" id="r-ico" name="IČO" inputmode="numeric" pattern="[0-9 ]{6,10}" disabled required>
+            </div>
+            <div class="form-field">
+              <label for="r-email">E-mail <span class="req">*</span></label>
+              <input type="email" id="r-email" name="E-mail" autocomplete="email" required>
+            </div>
+            <div class="form-field">
+              <label for="r-telefon">Telefon</label>
+              <input type="tel" id="r-telefon" name="Telefon" autocomplete="tel">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-block">
+          <legend><span data-for="osoba">Adresa trvalého bydliště</span><span data-for="firma" hidden>Sídlo</span></legend>
+          <div class="form-grid">
+            <div class="form-field span-2">
+              <label for="r-ulice">Ulice a číslo domu <span class="req">*</span></label>
+              <input type="text" id="r-ulice" name="Ulice a číslo" autocomplete="street-address" required>
+            </div>
+            <div class="form-field">
+              <label for="r-obec">Obec <span class="req">*</span></label>
+              <input type="text" id="r-obec" name="Obec" autocomplete="address-level2" required>
+            </div>
+            <div class="form-field">
+              <label for="r-psc">PSČ <span class="req">*</span></label>
+              <input type="text" id="r-psc" name="PSČ" inputmode="numeric" autocomplete="postal-code" pattern="[0-9 ]{5,6}" required>
+            </div>
+          </div>
+          <label class="consent"><input type="checkbox" id="r-jina-adresa"> <span>Potvrzení chci poslat na jinou (korespondenční) adresu</span></label>
+          <div class="form-grid" id="r-koresp" hidden>
+            <div class="form-field span-2">
+              <label for="r-k-ulice">Ulice a číslo domu <span class="req">*</span></label>
+              <input type="text" id="r-k-ulice" name="Korespondenční adresa – ulice" disabled required>
+            </div>
+            <div class="form-field">
+              <label for="r-k-obec">Obec <span class="req">*</span></label>
+              <input type="text" id="r-k-obec" name="Korespondenční adresa – obec" disabled required>
+            </div>
+            <div class="form-field">
+              <label for="r-k-psc">PSČ <span class="req">*</span></label>
+              <input type="text" id="r-k-psc" name="Korespondenční adresa – PSČ" inputmode="numeric" pattern="[0-9 ]{5,6}" disabled required>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-block">
+          <legend>Platba</legend>
+          <p class="field-hint">Variabilní symbol nepoužíváme, proto nám prosím pomozte platbu dohledat.</p>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="r-castka">Částka daru (Kč) <span class="req">*</span></label>
+              <input type="number" id="r-castka" name="Částka daru (Kč)" min="1" step="1" inputmode="numeric" required>
+            </div>
+            <div class="form-field">
+              <label for="r-datum">Datum odeslání platby <span class="req">*</span></label>
+              <input type="date" id="r-datum" name="Datum platby" required>
+            </div>
+            <div class="form-field span-2">
+              <label for="r-ucet">Číslo účtu, ze kterého jste platili</label>
+              <input type="text" id="r-ucet" name="Číslo účtu dárce" placeholder="např. 123456789/0800">
+            </div>
+          </div>
+        </fieldset>
+
+        <label class="consent"><input type="checkbox" name="Souhlas" value="Ano" required> <span>Beru na vědomí, že uvedené údaje Centrum JUSTY z.ú. zpracuje za účelem vystavení potvrzení o daru a vedení účetnictví, jak popisují <a href="assets/dokumenty/gdpr-ostatni.pdf" target="_blank" rel="noopener">zásady ochrany osobních údajů</a>.</span></label>
+
+        <p class="field-hint">Potvrzení vystavujeme souhrnně za celý kalendářní rok a posíláme je na začátku roku následujícího. Pole označená <span class="req">*</span> jsou povinná.</p>
+
+        <button type="submit" class="cta">Odeslat žádost</button>
+        <p class="form-status donate-note" role="status"></p>
+      </form>
     </div>
   </div>
 </section>
@@ -349,5 +457,6 @@
 <script src="assets/qr.js"></script>
 <script src="assets/donate.js" defer></script>
 <script src="assets/nav.js" defer></script>
+<script src="assets/forms.js" defer></script>
 </body>
 </html>

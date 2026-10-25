@@ -14,7 +14,8 @@
       if(!was)g.classList.add('open');
     });
   });
-  document.querySelectorAll('.dropdown a').forEach(function(l){l.addEventListener('click',function(){setOpen(false);});});
+  document.querySelectorAll('#main-nav a:not(.drop-trigger)').forEach(function(l){l.addEventListener('click',function(){setOpen(false);});});
+  document.addEventListener('click',function(e){if(header.classList.contains('nav-open')&&!header.contains(e.target))setOpen(false);});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')setOpen(false);});
   mq.addEventListener&&mq.addEventListener('change',function(){setOpen(false);document.querySelectorAll('.has-dropdown.open').forEach(function(x){x.classList.remove('open');});});
 })();
