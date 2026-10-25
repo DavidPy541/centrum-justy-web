@@ -234,3 +234,17 @@ footer p, footer a{color:#C9BFAF;font-size:14px;}
 @media (max-width:600px){
   .event{grid-template-columns:1fr;gap:8px;padding:18px;}
 }
+
+/* v6: foto v týmu, formuláře, dary */
+.team-member.has-photo{display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:start;}
+.team-photo{width:200px;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:12px;display:block;}
+@media (max-width:600px){.team-member.has-photo{grid-template-columns:1fr;}.team-photo{width:160px;}}
+.signup-form{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:0 0 24px;max-width:640px;}
+.signup-form[hidden]{display:none;}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--ink-soft);line-height:1.5;margin-top:16px;}
+.consent input{margin-top:3px;flex:none;}
+.consent a{text-decoration:underline;color:var(--terracotta-dark);}
+.step-body .consent{margin-top:0;}
+.donate-custom{margin-top:10px;width:100%;height:44px;border:1px solid var(--line);border-radius:8px;padding:0 14px;font-size:15px;font-family:'Work Sans',sans-serif;}
+.qr-placeholder{width:140px;height:140px;padding:4px;}
+[hidden]{display:none !important;}
