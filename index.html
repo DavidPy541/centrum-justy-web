@@ -155,22 +155,27 @@
       <div class="donate-step">
         <span class="step-num">3</span>
         <div class="step-body">
-          <p class="step-label">Odešlete Váš dar pomocí těchto platebních údajů</p>
+          <p class="step-label">Pošlete dar ze svého bankovnictví</p>
           <p id="donate-locked" class="donate-note" style="margin:0;">Platební údaje se zobrazí po zadání částky a potvrzení souhlasu s podmínkami.</p>
           <div id="donate-details" class="donate-details" hidden>
             <div class="donate-fields">
-              <div><span class="field-label">Číslo účtu</span><span class="field-value">1496624005 / 5500</span></div>
+              <div><span class="field-label">Transparentní účet</span><span class="field-value">1496624005 / 5500</span></div>
               <div><span class="field-label">Částka</span><span class="field-value" id="donate-sum">–</span></div>
               <div><span class="field-label">Příjemce</span><span class="field-value">Centrum JUSTY z.ú.</span></div>
             </div>
             <div class="qr-placeholder" id="donate-qr" role="img" aria-label="QR kód pro platbu"></div>
+            <ol class="pay-howto">
+              <li>Otevřete mobilní nebo internetové bankovnictví své banky.</li>
+              <li>V mobilu zvolte platbu QR kódem a naskenujte kód výše – číslo účtu i částka se vyplní samy. Případně zadejte platbu ručně podle údajů výše.</li>
+              <li>Platbu potvrďte v bance. Tím je dar odeslaný, na webu už nic dalšího odesílat nemusíte.</li>
+            </ol>
+            <p class="donate-note pay-note">Peníze se neposílají přímo z tohoto webu – stránka jen připraví platební údaje. Účet je transparentní, přijaté platby jsou veřejně vidět na stránkách banky.</p>
           </div>
           <a href="#potvrzeni-daru" class="donate-link" data-toggle-form="potvrzeni-daru" aria-controls="potvrzeni-daru">Chci získat potvrzení o daru</a>
         </div>
       </div>
 
       <form id="potvrzeni-daru" class="receipt-form" data-success="Děkujeme, žádost o potvrzení jsme přijali. Potvrzení vám pošleme e-mailem." hidden>
-        <input type="hidden" name="access_key" value="a951c080-5f55-45cc-844b-e0aa339f17e7">
         <input type="hidden" name="subject" value="Žádost o potvrzení o daru – web Centrum JUSTY z.ú.">
         <input type="hidden" name="from_name" value="Web Centrum JUSTY z.ú.">
         <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
@@ -291,8 +296,7 @@
         </div>
       </div>
 
-      <form id="poptavka-form" class="poptavka-form">
-        <input type="hidden" name="access_key" value="a951c080-5f55-45cc-844b-e0aa339f17e7">
+      <form id="poptavka-form" class="poptavka-form" data-success="Děkujeme, formulář byl odeslán. Ozveme se vám co nejdříve.">
         <input type="hidden" name="subject" value="Nová poptávka z webu Centrum JUSTY z.ú.">
         <input type="hidden" name="from_name" value="Web Centrum JUSTY z.ú.">
         <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
@@ -325,7 +329,7 @@
         </div>
 
         <button type="submit" class="cta" style="margin-top:22px;">Odeslat</button>
-        <p id="poptavka-status" class="donate-note"></p>
+        <p id="poptavka-status" class="form-status donate-note" role="status"></p>
       </form>
     </div>
   </div>
@@ -351,7 +355,7 @@
       <li>podporovat dítě v poznání a porozumění jeho životnímu příběhu a v případě, že je to v jeho nejlepším zájmu a s ohledem na jeho bezpečí, napomáhat budování a udržování vztahů s jeho původní rodinou;</li>
       <li>spolupracovat a propojovat jednotlivé subjekty systému sociálně-právní ochrany dětí (OSPOD) s cílem hledat vhodná řešení situace ohroženého dítěte, která vycházejí z jeho individuálních potřeb a nejlepšího zájmu;</li>
       <li>poskytovat cílovým skupinám potřebnou podporu, poradenství a odbornou pomoc při zvládání situací spojených s náhradní rodinnou péčí a při naplňování potřeb dítěte;</li>
-      <li>vytvářet bezpečné, respektující a důvěrné prostředí pro konzultace, podporu a spolupráci s dětmi, pečujícími osobami, osobami v evidenci, osvojiteli a dalšími osobami zapojenými do péče o dítě.</li>
+      <li>vytvářet bezpečné, respektující a důvěrné prostředí pro konzultace, podporu a spolupráci s dlouhodobými pěstouny, přechodnými pěstouny, s dětmi, pečujícími osobami, osobami v evidenci a dalšími osobami zapojenými do péče o dítě.</li>
     </ul>
   </div>
 </section>
@@ -423,37 +427,6 @@
   <div class="foot-bottom wrap">© 2026 Centrum JUSTY z.ú. — sociálně-právní ochrana dětí v Praze a Středočeském kraji</div>
 </footer>
 
-<script>
-  var poptavkaForm = document.getElementById('poptavka-form');
-  if (poptavkaForm) {
-    poptavkaForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var status = document.getElementById('poptavka-status');
-      var submitBtn = poptavkaForm.querySelector('button[type="submit"]');
-      status.textContent = 'Odesílám…';
-      submitBtn.disabled = true;
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        headers: { 'Accept': 'application/json' },
-        body: new FormData(poptavkaForm)
-      })
-        .then(function (r) { return r.json(); })
-        .then(function (result) {
-          submitBtn.disabled = false;
-          if (result.success) {
-            status.textContent = 'Děkujeme, formulář byl odeslán. Ozveme se vám co nejdříve.';
-            poptavkaForm.reset();
-          } else {
-            status.textContent = 'Něco se nepovedlo. Napište nám prosím přímo na centrumjusty@gmail.com.';
-          }
-        })
-        .catch(function () {
-          submitBtn.disabled = false;
-          status.textContent = 'Něco se nepovedlo. Napište nám prosím přímo na centrumjusty@gmail.com.';
-        });
-    });
-  }
-</script>
 <script src="assets/qr.js"></script>
 <script src="assets/donate.js" defer></script>
 <script src="assets/nav.js" defer></script>

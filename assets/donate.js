@@ -27,7 +27,7 @@
     var ok = vop.checked && a;
     details.hidden = !ok;
     locked.hidden = !!ok;
-    locked.textContent = !a ? 'Zvolte nebo zadejte prosím částku.' : 'Platební údaje se zobrazí po potvrzení souhlasu s podmínkami.';
+    locked.textContent = !a ? 'Nejprve zvolte nebo zadejte částku (krok 1).' : 'Zaškrtněte prosím souhlas s podmínkami (krok 2) – pak se tu zobrazí číslo účtu a QR kód.';
     if (!ok) return;
     sum.textContent = a.toLocaleString('cs-CZ') + ' Kč';
     var spd = 'SPD*1.0*ACC:' + IBAN + '*AM:' + a.toFixed(2) + '*CC:CZK*MSG:DAR CENTRUM JUSTY';
